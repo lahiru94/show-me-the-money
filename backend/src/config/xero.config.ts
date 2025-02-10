@@ -1,5 +1,5 @@
 import { AxiosRequestConfig } from "axios";
 
 export const axiosConfig: AxiosRequestConfig = {
-    baseURL: 'http://host.docker.internal:3000',
+    baseURL: process.env.XERO_SERVICE_URL || 'http://localhost:3000',
 };

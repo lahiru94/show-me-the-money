@@ -9,13 +9,26 @@ services:
   backend:
     build: ./backend
     ports:
-      - "3002:3002"
+      - "3001:3001"
+    environment:
+      - PORT=3001
+      - XERO_SERVICE_URL=http://host.docker.internal:3000
+    volumes:
+      - type: bind
+        source: ./backend/src
+        target: /backend/src
 
   frontend:
     build: ./webapp
     ports:
-      - "3001:3001"
+      - "3002:3002"
     depends_on:
       - backend
-
+    environment:
+      - PORT=3002
+      - BACKEND_URL=http://host.docker.internal:3001
+    volumes:
+      - type: bind
+        source: ./webapp/src
+        target: /webapp/src
 
