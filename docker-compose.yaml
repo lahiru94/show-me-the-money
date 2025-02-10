@@ -1,0 +1,21 @@
+version: "3.8"
+services:
+
+  xero-mock-server:
+    image: jaypeng2015/show-me-the-money
+    ports:
+      - "3000:3000"
+
+  backend:
+    build: ./backend
+    ports:
+      - "3002:3002"
+
+  frontend:
+    build: ./webapp
+    ports:
+      - "3001:3001"
+    depends_on:
+      - backend
+
+

@@ -4,7 +4,7 @@ import Header from './header';
 import Row from './row';
 import BalanceSheetError from './balanceSheetError';
 const BalanceSheet: React.FC = async () => {
-    const response = await fetch('http://localhost:3002/api/balance-sheet');
+    const response = await fetch('http://host.docker.internal:3002/api/balance-sheet');
     if(!response.ok) {
         return <BalanceSheetError/>;
     }

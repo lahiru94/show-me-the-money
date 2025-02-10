@@ -3,7 +3,6 @@
 //for any unexpected errors, this component will be rendered
 
 export default function Error({
-    error,
     reset,
 }: {
     error: Error & { digest?: string };
