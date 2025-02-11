@@ -1,6 +1,6 @@
 import express, { Express, Request, Response } from "express";
 import dotenv from "dotenv";
-import balanceSheetRoutes from "./routes/balace-sheet.routes";
+import balanceSheetRoutes from "./routes/balance-sheet.routes";
 
 dotenv.config();
 

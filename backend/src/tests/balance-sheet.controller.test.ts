@@ -6,6 +6,7 @@ import { getBalanceSheetController } from '../controllers/balance-sheet.controll
 const { mockGetBalanceSheet } = vi.hoisted(() => {
     return { mockGetBalanceSheet: vi.fn() }
 })
+
 vi.mock('../services/xero.service', () => ({
     getBalanceSheetService: mockGetBalanceSheet
 }));
