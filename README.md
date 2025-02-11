@@ -10,7 +10,7 @@
 - Testing is setup using Vitest. Run `npm test` to run the tests.
 
 ## Containerization
-- Application is containerized using docker compose for the development setup. (no production ready)
+- Application is containerized using docker compose for the development setup. (not production ready)
 - Run `docker compose up` to start the application.
 - This will start the xero mock server, backend and frontend.
 - The webapp will be available at `http://localhost:3002`
