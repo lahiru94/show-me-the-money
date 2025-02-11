@@ -23,4 +23,12 @@ describe('Xero Service', () => {
             `${errorMessage}`
         );
     });
+
+    it('should throw an error when response is invalid', async () => {
+        const errorMessage = 'Invalid Xero response';
+        vi.spyOn(xeroAxiosHandler, 'get').mockResolvedValue({
+            data: { Reports: [] }
+        });
+        await expect(getBalanceSheetService()).rejects.toThrow(errorMessage);
+    });
 });
