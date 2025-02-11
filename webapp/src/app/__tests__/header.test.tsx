@@ -11,7 +11,13 @@ describe('Header Component', () => {
     ];
 
     it('renders all header cells', () => {
-        render(<Header cells={mockCells} />);
+        render(
+            <table>
+                <thead>
+                    <Header cells={mockCells} />
+                </thead>
+            </table>
+        );
         
         mockCells.forEach(cell => {
             expect(screen.getByText(cell.value).textContent).toContain(cell.value);
@@ -19,7 +25,13 @@ describe('Header Component', () => {
     });
 
     it('applies correct classes to header cells', () => {
-        render(<Header cells={mockCells} />);
+        render(
+            <table>
+                <thead>
+                    <Header cells={mockCells} />
+                </thead>
+            </table>
+        );
         
         const headerCells = screen.getAllByRole('columnheader');
         
