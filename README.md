@@ -2,8 +2,6 @@
 
 ## Webapp
 - The webapp is built using Next.js and TypeScript.
-- It is containerized using docker compose.
-- It is deployed on vercel.
 - Testing is setup using Vitest and React Testing Library. Run `npm test` to run the tests.
 
 ## Backend
